@@ -5,7 +5,7 @@
   Paulo Henrique Soares dos Santos
 */ 
 
-package test.mockito;
+package test.eclemma;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -100,4 +100,31 @@ public class TesteUnidadeMockitoComment {
 		assertEquals(comment.toString(), comentario);
 	}
 	
+	@Test
+	public void testeComment3Parametros() {
+		String message = "John Doe";
+		long id = 3L;
+		User user = new User();
+		Comment comment = new Comment(message, id, user);
+		comment.setId(3L);
+		assertEquals(comment.getId(), 3L);
+		assertEquals(comment.getMessage(), "John Doe");
+		assertEquals(comment.getUser(), user);
+	}
+	
+	@Test
+	public void testeComment4Parametros() {
+		String message = "John Doe";
+		long id = 3L;
+		User user = new User();
+		Comment commentParent = new Comment();
+		Comment comment = new Comment(message, id, user, commentParent);
+		comment.setId(3L);
+		assertEquals(comment.getId(), 3L);
+		assertEquals(comment.getMessage(), "John Doe");
+		assertEquals(comment.getUser(), user);
+		assertEquals(comment.getUser(), user);
+		
+	}
+
 }

@@ -135,4 +135,3 @@ Go to `http://localhost:5000/` and there you have it!
   - You may have to change permissions in order to execute the scripts.
 
 *These instructions have been tested for Ubuntu 14.04 and Ubuntu 16.04*
-OS CÓDIGOS DE TESTE SE ENCONTRAM NA PASTA SRC/TEST/JAVA/TEST/MOCKITO

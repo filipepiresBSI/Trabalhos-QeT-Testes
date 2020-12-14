@@ -5,7 +5,7 @@
   Paulo Henrique Soares dos Santos
 */ 
 
-package test.mockito;
+package test.eclemma;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -39,6 +39,30 @@ public class TesteUnidadeMockitoForum {
 		List<Entry> lista = new ArrayList<>();
 		forum.setEntries(lista);
 		assertEquals(forum.getEntries(), lista);
+	}
+	
+	@Test
+	public void testeSetIdActivated() {
+		Forum forum = new Forum(true);
+		forum.setId(3L);
+		assertEquals(forum.getId(), 3L);
+	}
+	
+	@Test
+	public void testeIsActivatedActivated() {
+		Forum forum = new Forum(true);
+		forum.setActivated(true);
+		assertEquals(forum.isActivated(), true);
+	}
+	
+	@Test
+	public void testeStringToString() {
+		Forum forum = new Forum();
+		forum.setActivated(true);
+		List<Entry> lista = new ArrayList<>();
+		forum.setEntries(lista);
+		String comparacao = "Forum[activated: \"" + forum.isActivated() + "\", #entries: \"" + 0 + "\", #comments: \"" + 0 + "\"]";
+		assertEquals(forum.toString(), comparacao);
 	}
 	
 

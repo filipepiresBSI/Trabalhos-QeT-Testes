@@ -5,7 +5,7 @@
   Paulo Henrique Soares dos Santos
 */ 
 
-package test.mockito;
+package test.eclemma;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,7 +30,7 @@ public class TesteUnidadeMockitoUserComponent {
 		UserComponent uc = new UserComponent();
 		User user = new User();
 		uc.setLoggedUser(user);
-		assertTrue(uc.getLoggedUser() != null);
+		assertTrue(uc.isLoggedUser() == (user != null));
 	}
 	
 

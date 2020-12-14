@@ -5,7 +5,7 @@
   Paulo Henrique Soares dos Santos
 */ 
 
-package test.mockito;
+package test.eclemma;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -70,6 +70,30 @@ public class TesteUnidadeMockitoCourse {
 		Set<Session> set = null;
 		course.setSessions(set);
 		assertEquals(course.getSessions(), set);
+	}
+	
+	@Test
+	public void testeCourse3Parametros() {
+		String title = "John Doe";
+		String image = "Jane Doe";
+		User user = new User();
+		Course course = new Course(title, image, user);
+		assertEquals(course.getTitle(), "John Doe");
+		assertEquals(course.getImage(), "Jane Doe");
+		assertEquals(course.getTeacher(), user);
+	}
+	
+	@Test
+	public void testeCourse4Parametros() {
+		String title = "John Doe";
+		String image = "Jane Doe";
+		User user = new User();
+		CourseDetails courseDetails = new CourseDetails();
+		Course course = new Course(title, image, user, courseDetails);
+		assertEquals(course.getTitle(), "John Doe");
+		assertEquals(course.getImage(), "Jane Doe");
+		assertEquals(course.getTeacher(), user);
+		assertEquals(course.getCourseDetails(), courseDetails);
 	}
 }
 

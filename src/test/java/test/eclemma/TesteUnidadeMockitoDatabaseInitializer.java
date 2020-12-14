@@ -5,7 +5,7 @@
   Paulo Henrique Soares dos Santos
 */ 
 
-package test.mockito;
+package test.eclemma;
 
 public class TesteUnidadeMockitoDatabaseInitializer {
 	

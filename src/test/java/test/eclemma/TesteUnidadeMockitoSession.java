@@ -5,7 +5,7 @@
   Paulo Henrique Soares dos Santos
 */ 
 
-package test.mockito;
+package test.eclemma;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -42,7 +42,7 @@ public class TesteUnidadeMockitoSession {
 	public void testeSetDate() {
 		Session session = new Session();
 		session.setDate(10122020L);
-		assertEquals(session.getTitle(), 10122020L);
+		assertEquals(session.getDate(), 10122020L);
 	}
 	
 	@Test
@@ -53,4 +53,28 @@ public class TesteUnidadeMockitoSession {
 		assertEquals(session.getCourse(), course);
 	}
 	
+	@Test
+	public void testeSession3Parametros() {
+		String title = "John Doe";
+		String description = "Jane Doe";
+		long date = 13122020L;
+		Session session = new Session(title, description, date);
+		assertEquals(session.getTitle(), "John Doe");
+		assertEquals(session.getDescription(), "Jane Doe");
+		assertEquals(session.getDate(), 13122020L);
+		
+	}
+	
+	@Test
+	public void testeSession4Parametros() {
+		String title = "John Doe";
+		String description = "Jane Doe";
+		long date = 13122020L;
+		Course course = new Course();
+		Session session = new Session(title, description, date, course);
+		assertEquals(session.getTitle(), "John Doe");
+		assertEquals(session.getDescription(), "Jane Doe");
+		assertEquals(session.getDate(), 13122020L);
+		assertEquals(session.getCourse(), course);
+	}
 }

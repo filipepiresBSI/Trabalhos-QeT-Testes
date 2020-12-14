@@ -5,7 +5,7 @@
   Paulo Henrique Soares dos Santos
 */ 
 
-package test.mockito;
+package test.eclemma;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -59,5 +59,14 @@ public class TesteUnidadeMockitoEntry {
 		assertEquals(entry.getUser(), user);
 	}
 	
-	
+	@Test
+	public void testeEntry3Parametros() {
+		String title = "John Doe";
+		long id = 3L;
+		User user = new User();
+		Entry entry = new Entry(title, id, user);
+		assertEquals(entry.getTitle(), title);
+		assertEquals(entry.getId(), id);
+		assertEquals(entry.getUser(), user);
+	}
 }
