@@ -62,7 +62,7 @@ public class TesteUnidadeMockitoEntry {
 	@Test
 	public void testeEntry3Parametros() {
 		String title = "John Doe";
-		long id = 3L;
+		long id = 0;
 		User user = new User();
 		Entry entry = new Entry(title, id, user);
 		assertEquals(entry.getTitle(), title);
